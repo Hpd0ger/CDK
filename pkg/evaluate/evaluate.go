@@ -17,8 +17,8 @@ limitations under the License.
 package evaluate
 
 import (
-	"github.com/cdk-team/CDK/pkg/util"
 	"github.com/cdk-team/CDK/conf"
+	"github.com/cdk-team/CDK/pkg/util"
 )
 
 // CallBasics is a function to call basic functions
@@ -44,8 +44,9 @@ func CallBasics() {
 	util.PrintH2("Information Gathering - Sysctl Variables")
 	CheckRouteLocalNetworkValue()
 
-	util.PrintH2("Information Gathering - DNS-Based Service Discovery")
-	DNSBasedServiceDiscovery()
+	//查询不到任何东西
+	//util.PrintH2("Information Gathering - DNS-Based Service Discovery")
+	//DNSBasedServiceDiscovery()
 
 	util.PrintH2("Discovery - K8s API Server")
 	CheckK8sAnonymousLogin()
