@@ -1,7 +1,7 @@
 
 # CDK - Zero Dependency Container Penetration Toolkit
 
-English | [简体中文](https://github.com/cdk-team/CDK/wiki/CDK-Home-CN)
+English
 
 ![png](https://user-images.githubusercontent.com/7868679/177925206-8d83dc95-0f2f-4d61-9a45-0d43b1b0468f.png)
 
@@ -120,7 +120,6 @@ This command will run the scripts below without local file scanning, using `--fu
 |Information Gathering|Sensitive Process|✔|[link](https://github.com/cdk-team/CDK/wiki/Evaluate:-Services)|
 |Information Gathering|Sensitive Local Files|✔|[link](https://github.com/cdk-team/CDK/wiki/Evaluate:-Sensitive-Files)|
 |Information Gathering|Kube-proxy Route Localnet(CVE-2020-8558)|✔|[link](https://github.com/cdk-team/CDK/wiki/Evaluate:-check-net.ipv4.conf.all.route_localnet)|
-|Information Gathering|DNS-Based Service Discovery|✔|[link](https://github.com/kubernetes/dns/blob/master/docs/specification.md)|
 |Discovery|K8s Api-server Info|✔|[link](https://github.com/cdk-team/CDK/wiki/Evaluate:-K8s-API-Server)|
 |Discovery|K8s Service-account Info|✔|[link](https://github.com/cdk-team/CDK/wiki/Evaluate:-K8s-Service-Account)|
 |Discovery|Cloud Provider Metadata API|✔|[link](https://github.com/cdk-team/CDK/wiki/Evaluate:-Cloud-Provider-Metadata-API)|
@@ -179,88 +178,22 @@ cdk nc [options]
 cdk ps
 ```
 
-|Command|Description|Supported|Usage/Example|
-|---|---|---|---|
-|nc|TCP Tunnel|✔|[link](https://github.com/cdk-team/CDK/wiki/Tool:-nc)|
-|ps|Process Information|✔|[link](https://github.com/cdk-team/CDK/wiki/Tool:-ps)|
-|ifconfig|Network Information|✔|[link](https://github.com/cdk-team/CDK/wiki/Tool:-ifconfig)|
-|vi|Edit Files|✔|[link](https://github.com/cdk-team/CDK/wiki/Tool:-vi)|
-|ectl|Unauthorized enumeration of ectd keys|✔||
-|kcurl|Request to K8s api-server|✔|[link](https://github.com/cdk-team/CDK/wiki/Tool:-kcurl)|
-|dcurl|Request to Docker HTTP API|✔|[link](https://github.com/cdk-team/CDK/wiki/Tool:-dcurl)|
-|ucurl|Request to Docker Unix Socket|✔|[link](https://github.com/cdk-team/CDK/wiki/Tool:-ucurl)|
-|rcurl|Request to Docker Registry API|||
-|probe|IP/Port Scanning|✔|[link](https://github.com/cdk-team/CDK/wiki/Tool:-probe)|
+| Command  | Description                           |Supported|Usage/Example|
+|----------|---------------------------------------|---|--|
+| nc       | TCP Tunnel                            |✔|[link](https://github.com/cdk-team/CDK/wiki/Tool:-nc)|
+| ps       | Process Information                   |✔|[link](https://github.com/cdk-team/CDK/wiki/Tool:-ps)|
+| ifconfig | Network Information                   |✔|[link](https://github.com/cdk-team/CDK/wiki/Tool:-ifconfig)|
+| vi       | Edit Files                            |✔|[link](https://github.com/cdk-team/CDK/wiki/Tool:-vi)|
+| ectl     | Unauthorized enumeration of ectd keys |✔||
+| kcurl    | Request to K8s api-server             |✔|[link](https://github.com/cdk-team/CDK/wiki/Tool:-kcurl)|
+| dcurl    | Request to Docker HTTP API            |✔|[link](https://github.com/cdk-team/CDK/wiki/Tool:-dcurl)|
+| ucurl    | Request to Docker Unix Socket         |✔|[link](https://github.com/cdk-team/CDK/wiki/Tool:-ucurl)|
+| rcurl    | Request to Docker Registry API        |||
+| probe    | IP/Port Scanning                      |✔|[link](https://github.com/cdk-team/CDK/wiki/Tool:-probe)|
+| dns      | use dns to discovery IP               |✔|[link](https://github.com/Esonhugh/k8spider/tree/Skyworship)|
 
-### Release Document
-
-If you want to know how we released a new version, how thin is produced, why we provide upx versions, what the differences between different versions about all, normal, thin, upx are, and how to choose specific CDK exploits and tools to compile an own release for yourself, please check the [Release Document](https://github.com/cdk-team/CDK/wiki/Release).
-
-## Developer Docs
-
-* [run test in container.](https://github.com/cdk-team/CDK/wiki/Run-Test)
-
-## Contributing to CDK
-
-First off, thanks for taking the time to contribute!
-
-Thanks for the following contributors:
-
-<a href="https://github.com/cdk-team/cdk/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=cdk-team/cdk" />
-</a>
-
-More contributors：[Contributors List](thanks.md)
-
-#### Bug Reporting
-
-Bugs are tracked as [GitHub Issues](https://github.com/cdk-team/CDK/issues). Create an issue with the current CDK version, error msg and the environment. Describe the exact steps which reproduce the problem.
-
-#### Suggesting Enhancements
-
-Enhancement suggestions are tracked as [GitHub Discussions](https://github.com/cdk-team/CDK/discussions). You can publish any thoughts here to discuss with developers directly.
-
-#### Pull Requests
-
-Fix problems or maintain CDK's quality:
-
-* Describe the current CDK version, environment, problem and exact steps that reproduce the problem.
-* Running screenshots or logs before and after you fix the problem.
-
-New feature or exploits:
-
-* Explain why this enhancement would be useful to other users.
-* Please enable a sustainable environment for us to review contributions.
-* Screenshots about how this new feature works.
-* If you are committing a new evaluate/exploit scripts, please add a simple doc to your PR message, here is an [example](https://github.com/cdk-team/CDK/wiki/Exploit:-docker-sock-deploy).
-
-## Events
-
-### 404StarLink 2.0 - Galaxy
-![png](https://github.com/knownsec/404StarLink-Project/raw/master/logo.png)
-
-Project CDK is now included in 404Team [Starlink Project 2.0](https://github.com/knownsec/404StarLink2.0-Galaxy). Join the StarLink community to get in touch with CDK dev-team.
-
-- [https://github.com/knownsec/404StarLink2.0-Galaxy#community](https://github.com/knownsec/404StarLink2.0-Galaxy#community)
-
-### BlackHat Asia 2021 Arsenal
-
-- [https://www.blackhat.com/asia-21/arsenal/schedule/index.html#cdk-zero-dependency-container-penetration-toolkit-22422](https://www.blackhat.com/asia-21/arsenal/schedule/index.html#cdk-zero-dependency-container-penetration-toolkit-22422)
-
-### HITB SecConf 2021 Amsterdam
-
-- [Briefing: "Attack Cloud Native Kubernetes"](https://conference.hitb.org/hitbsecconf2021ams/sessions/attacking-cloud-native-kubernetes-with-cdk/)
-
-
-### WHC 2021 (补天白帽大会)
-
-- [CDK: Also a Awesome BugBounty Tool for Cloud Platform](https://github.com/neargle/slidefiles/blob/main/2021%20WHC2021%20CDK-Also-a-Awesome-BugBounty-Tool-for-Cloud-Platform.pptx.pdf)
-
-### KCON 2021 Arsenal
-
-- [http://kcon.knownsec.com/2021/#/arsenal](http://kcon.knownsec.com/2021/#/arsenal)
-
-### Kubernetes community Days 2021 
-
-- [https://community.cncf.io/events/details/cncf-kcd-china-presents-kubernetes-community-days-china/](https://community.cncf.io/events/details/cncf-kcd-china-presents-kubernetes-community-days-china/)
-
+### dns功能
+dns discovery cidr_ipaddress：通过dns发现ip地址，以及使用DNS的PTR记录，反查域名
+```bash
+$ ./cdk dns discovery 10.0.16.0/16
+```

@@ -1,4 +1,3 @@
-
 /*
 Copyright 2022 The Authors of https://github.com/CDK-TEAM/CDK .
 
@@ -26,6 +25,18 @@ import (
 )
 
 func CheckK8sAnonymousLogin() bool {
+	// print kube-api server version
+	addr, err := kubectl.ApiServerAddr()
+	if err != nil {
+		fmt.Println(err)
+	}
+
+	apiVersion, err := kubectl.GetServerVersion(addr)
+	if err != nil {
+		fmt.Println(err)
+	}
+
+	log.Println("api-server version: " + apiVersion)
 
 	// check if api-server allows system:anonymous request
 	log.Println("checking if api-server allows system:anonymous request.")

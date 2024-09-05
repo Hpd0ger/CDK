@@ -158,6 +158,9 @@ func ServerAccountRequest(opts K8sRequestOption) (string, error) {
 		request.Header.Set("Authorization", "Bearer "+token)
 	}
 
+	//fake user-agent to bypass some waf
+	request.Header.Set("User-Agent", "kubelet/v1.27.3 (linux/amd64) kubernetes/25b4e43")
+
 	resp, err := client.Do(request)
 	if err != nil {
 		return "", &errors.CDKRuntimeError{Err: err, CustomMsg: "err found in post request."}
