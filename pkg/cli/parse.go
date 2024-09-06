@@ -19,6 +19,7 @@ package cli
 import (
 	"fmt"
 	"github.com/cdk-team/CDK/pkg/tool/dns"
+	"github.com/cdk-team/CDK/pkg/tool/netstat"
 
 	"github.com/cdk-team/CDK/pkg/evaluate"
 	"github.com/cdk-team/CDK/pkg/plugin"
@@ -115,6 +116,8 @@ func ParseCDKMain() bool {
 			network.GetLocalAddresses()
 		case "ps":
 			ps.RunPs()
+		case "netstat":
+			netstat.RunNetstat()
 		case "dns":
 			dns.RunDnsReverseLookup(args)
 		//网络探测，同时也需要反查域名

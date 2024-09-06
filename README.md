@@ -1,7 +1,7 @@
 
 # CDK - Zero Dependency Container Penetration Toolkit
 
-English
+English | [简体中文](https://github.com/cdk-team/CDK/wiki/CDK-Home-CN)
 
 ![png](https://user-images.githubusercontent.com/7868679/177925206-8d83dc95-0f2f-4d61-9a45-0d43b1b0468f.png)
 
@@ -178,6 +178,21 @@ cdk nc [options]
 cdk ps
 ```
 
+|Command|Description|Supported|Usage/Example|
+|---|---|---|---|
+|nc|TCP Tunnel|✔|[link](https://github.com/cdk-team/CDK/wiki/Tool:-nc)|
+|ps|Process Information|✔|[link](https://github.com/cdk-team/CDK/wiki/Tool:-ps)|
+|netstat|Like "netstat -antup" command|✔||
+|ifconfig|Network Information|✔|[link](https://github.com/cdk-team/CDK/wiki/Tool:-ifconfig)|
+|vi|Edit Files|✔|[link](https://github.com/cdk-team/CDK/wiki/Tool:-vi)|
+|ectl|Unauthorized enumeration of ectd keys|✔||
+|kcurl|Request to K8s api-server|✔|[link](https://github.com/cdk-team/CDK/wiki/Tool:-kcurl)|
+|dcurl|Request to Docker HTTP API|✔|[link](https://github.com/cdk-team/CDK/wiki/Tool:-dcurl)|
+|ucurl|Request to Docker Unix Socket|✔|[link](https://github.com/cdk-team/CDK/wiki/Tool:-ucurl)|
+|rcurl|Request to Docker Registry API|||
+|probe|IP/Port Scanning|✔|[link](https://github.com/cdk-team/CDK/wiki/Tool:-probe)|
+
+### Release Document
 | Command  | Description                           |Supported|Usage/Example|
 |----------|---------------------------------------|---|--|
 | nc       | TCP Tunnel                            |✔|[link](https://github.com/cdk-team/CDK/wiki/Tool:-nc)|
