@@ -21,6 +21,7 @@ import (
 	"crypto/tls"
 	"fmt"
 	"io/ioutil"
+	"math/rand"
 	"net"
 	"net/http"
 	"os"
@@ -162,6 +163,20 @@ func ServerAccountRequest(opts K8sRequestOption) (string, error) {
 
 	//fake user-agent to bypass some waf
 	request.Header.Set("User-Agent", "kubelet/v1.27.3 (linux/amd64) kubernetes/25b4e43")
+
+	// Anonymous mode，add random ip addresses to confuse ip addresses
+	if opts.Anonymous {
+		rand.Seed(time.Now().UnixNano())
+		ips := make([]string, 100)
+
+		for i := 0; i < 100; i++ {
+			ip := fmt.Sprintf("10.%d.%d.%d", rand.Intn(256), rand.Intn(256), rand.Intn(256))
+			ips[i] = ip
+		}
+
+		randIpStr := strings.Join(ips, ",")
+		request.Header.Set("X-Forwarded-For", randIpStr)
+	}
 
 	resp, err := client.Do(request)
 	if err != nil {
