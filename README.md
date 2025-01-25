@@ -207,7 +207,7 @@ cdk ps
 | probe    | IP/Port Scanning                      |✔|[link](https://github.com/cdk-team/CDK/wiki/Tool:-probe)|
 | dns      | use dns to discovery IP               |✔|[link](https://github.com/Esonhugh/k8spider/tree/Skyworship)|
 
-### dns功能
+### DNS功能
 dns discovery cidr_ipaddress：通过dns发现ip地址，以及使用DNS的PTR记录，反查域名
 ```bash
 $ ./cdk dns discovery 10.0.16.0/16
