@@ -44,10 +44,6 @@ func CallBasics() {
 	util.PrintH2("Information Gathering - Sysctl Variables")
 	CheckRouteLocalNetworkValue()
 
-	//查询不到任何东西
-	//util.PrintH2("Information Gathering - DNS-Based Service Discovery")
-	//DNSBasedServiceDiscovery()
-
 	util.PrintH2("Discovery - K8s API Server")
 	CheckK8sAnonymousLogin()
 
